@@ -47,3 +47,38 @@ Organizations face many challenges with securing their datacenters, including re
 ![tt](../../pictures/Security-is-a-shared-responsibility_06.png)
 ![tt](../../pictures/Security-is-a-shared-responsibility_07.png)
 ![tt](../../pictures/Security-is-a-shared-responsibility_08.png)
+
+
+The first shift you'll make is from on-premises data centers to infrastructure as a service (IaaS). With IaaS, you are leveraging the lowest-level service and asking Azure to create virtual machines (VMs) and virtual networks. At this level, it's still your responsibility to patch and secure your operating systems and software, as well as configure your network to be secure. At Contoso Shipping, you are taking advantage of IaaS when you start using Azure VMs instead of your on-premises physical servers. In addition to the operational advantages, you receive the security advantage of having outsourced concern over protecting the physical parts of the network.
+
+Moving to platform as a service (PaaS) outsources several security concerns. At this level, Azure is taking care of the operating system and of most foundational software like database management systems. Everything is updated with the latest security patches and can be integrated with Azure Active Directory for access controls. PaaS also comes with many operational advantages. Rather than building whole infrastructures and subnets for your environments by hand, you can "point and click" within the Azure portal or run automated scripts to bring complex, secured systems up and down, and scale them as needed. Contoso Shipping uses Azure Event Hubs for ingesting telemetry data from drones and trucks — as well as a web app with an Azure Cosmos DB back end with its mobile apps — which are all examples of PaaS.
+
+With software as a service (SaaS), you outsource almost everything. SaaS is software that runs with an internet infrastructure. The code is controlled by the vendor but configured to be used by the customer. Like so many companies, Contoso Shipping uses Microsoft 365 (formerly Office 365), which is a great example of SaaS!
+
+
+For all cloud deployment types, you own your data and identities. You are responsible for helping secure your data and identities, your on-premises resources, and the cloud components you control (which vary by service type).
+
+![tt](../../pictures/Sdata_is_liability_always.png)
+
+Regardless of the deployment type, you always retain responsibility for the following items:
+
+|data is a liability always|
+|----------------------------|
+|Data|
+|Endpoints|
+|Accounts|
+|Access management|
+
+Azure security: you versus the cloud
+
+
+![tt](../../pictures/Azure_security_you_versus_the_cloud00.png)
+
+![tt](../../pictures/Azure_security_you_versus_the_cloud01.png)
+
+![tt](../../pictures/Azure_security_you_versus_the_cloud02.png)
+
+![tt](../../pictures/Azure_security_you_versus_the_cloud03.png)
+
+
+
