@@ -1,5 +1,10 @@
 ## 1 security, responsibility, and trust in Azure
 
+[tt](https://docs.microsoft.com/nl-nl/learn/azure/?wt.mc_id=azurepaygday10_freetraining_tutorials-email-rm)
+
+[tt](https://docs.microsoft.com/en-us/learn/modules/intro-to-security-in-azure/)
+
+
 [Introduction](https://docs.microsoft.com/en-us/learn/modules/intro-to-security-in-azure/1-introduction)
 
 Every system, architecture, and application needs to be designed with security in mind. There's too much at risk. For instance, a denial of service attack could prevent your customer from reaching your web site or services and block you from doing business. Defacement of your website damages your reputation. And a data breach could be even worse — as it can ruin hard-earned trust, while causing significant personal and financial harm. As administrators, developers, and IT management, we all must work to guarantee the security of our systems.
