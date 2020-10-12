@@ -8,7 +8,7 @@ Ontwikkel uw Azure-vaardigheden  Breid uw vaardigheden voor Azure uit op uw eige
 [leer snel nieuwe vaardigheden met compacte zelfstudies die zijn afgestemd op Azure-technologierollen.](https://azure.microsoft.com/email/?destination=https%3A%2F%2Fdocs.microsoft.com%2Fnl-nl%2Flearn%2Fazure%2F%3Fwt.mc_id%3Dazurepaygday10_freetraining_tutorials-email-rm&p=bT1iY2NhNTc5NC0xM2NlLTQyMWMtODE1Yy0xYTc4MmJkZDYxNDImcz04N2Q1MDRlOS00NmU4LTRiODctOGY3Mi1mMjA3ZWU4ZTZkYWQmdT1hZW8mbD1henVyZV8y)
 
 |duur |LEERTRAJECT  | 
-|-------------|--------------------------------------------------------------------------|
+|--------------------|--------------------------------------------------------------------------|
 |5 uur 2 min.|Resources beheren in Azure ||
 |6 uur 8 min.|Identiteit en toegang beheren in Azure Active Directory |
 |4 uur 33 min.|Neem uw eerste stappen met Python |
