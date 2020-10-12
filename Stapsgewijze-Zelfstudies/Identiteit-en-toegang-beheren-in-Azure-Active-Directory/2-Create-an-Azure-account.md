@@ -165,3 +165,6 @@ We have covered several important topics in this module.
 
 ![tt](../../pictures/Knowledge_check.png)
 
+
+![tt](../../pictures/you_did_it_1.png)
+![tt](../../pictures/you_did_it_2.png)
