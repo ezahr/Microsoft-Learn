@@ -106,3 +106,16 @@ Next unit: Get tips from Azure Security Center
 
 
 
+Get tips from Azure Security Center
+10 minutes
+A great place to start when examining the security of your Azure-based solutions is Azure Security Center. Security Center is a monitoring service that provides threat protection across all of your services both in Azure, and on-premises. 
+
+
+|Security Center can:|
+||----------------------------------------------------------||
+|Provide security recommendations based on your configurations, resources, and networks.|
+|Monitor security settings across on-premises and cloud workloads, and automatically apply required security to new services as they come online.|
+|Continuously monitor all your services, and perform automatic security assessments to identify potential vulnerabilities before they can be exploited.|
+|Use machine learning to detect and block malware from being installed on your virtual machines and services. You can also define a list of allowed applications ||to ensure that only the apps you validate are allowed to execute.|
+|Analyze and identify potential inbound attacks, and help to investigate threats and any post-breach activity that might have occurred.|
+|Provide just-in-time access control for ports, reducing your attack surface by ensuring the network only allows traffic that you require.|
