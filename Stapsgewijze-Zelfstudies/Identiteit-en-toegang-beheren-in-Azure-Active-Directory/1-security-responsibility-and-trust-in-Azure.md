@@ -7,4 +7,4 @@ Let's say you work at a company called Contoso Shipping, and you're spearheading
 
 Additionally, Contoso Shipping has some out-of-network devices that are part of your operations. You are using network-enabled sensors in your drones that send data to Azure Event Hubs, while delivery drivers use mobile apps to get route maps and record signatures for receipt of shipments. These devices and apps must be securely authenticated before data can be sent to or from them.
 
-![tt](../../So-how-do-you-keep-your-data-secure.png)
+![tt](../../pictures/So-how-do-you-keep-your-data-secure.png)
