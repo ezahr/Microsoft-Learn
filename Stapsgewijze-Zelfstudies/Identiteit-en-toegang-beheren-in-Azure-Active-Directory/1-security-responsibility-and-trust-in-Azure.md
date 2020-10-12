@@ -82,3 +82,27 @@ Azure security: you versus the cloud
 
 
 
+## A layered approach to security
+Defense in depth is a strategy that employs a series of mechanisms to slow the advance of an attack aimed at acquiring unauthorized access to information. Each layer provides protection so that if one layer is breached, a subsequent layer is already in place to prevent further exposure. Microsoft applies a layered approach to security, both in physical data centers and across Azure services. The objective of defense in depth is to protect and prevent information from being stolen by individuals who are not authorized to access it.
+
+Defense in depth can be visualized as a set of concentric rings, with the data to be secured at the center. Each ring adds an additional layer of security around the data. This approach removes reliance on any single layer of protection and acts to slow down an attack and provide alert telemetry that can be acted upon, either automatically or manually. Let's take a look at each of the layers.
+
+## A layered approach to security
+
+
+![tt](../../pictures/a_layered_approach_to_security_00.png)
+![tt](../../pictures/a_layered_approach_to_security_01.png)
+![tt](../../pictures/a_layered_approach_to_security_02.png)
+![tt](../../pictures/a_layered_approach_to_security_03.png)
+![tt](../../pictures/a_layered_approach_to_security_04.png)
+![tt](../../pictures/a_layered_approach_to_security_05.png)
+![tt](../../pictures/a_layered_approach_to_security_06.png)
+
+
+
+Azure helps alleviate your security concerns. But security is still a shared responsibility. How much of that responsibility falls on us depends on which model we use with Azure. We use the defense in depth rings as a guideline for considering what protections are adequate for our data and environments.
+
+Next unit: Get tips from Azure Security Center
+
+
+
