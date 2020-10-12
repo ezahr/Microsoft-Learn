@@ -1,6 +1,6 @@
 ## Identiteit en toegang beheren in Azure Active Directory
 
-![tt](..//pictures/het_is_zo_weer_kerst.png)
+![tt](../../pictures/het_is_zo_weer_kerst.png)
 
 ## Manage identity and access in Azure Active Directory
 6 hr 8 min
