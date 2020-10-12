@@ -8,3 +8,42 @@ Let's say you work at a company called Contoso Shipping, and you're spearheading
 Additionally, Contoso Shipping has some out-of-network devices that are part of your operations. You are using network-enabled sensors in your drones that send data to Azure Event Hubs, while delivery drivers use mobile apps to get route maps and record signatures for receipt of shipments. These devices and apps must be securely authenticated before data can be sent to or from them.
 
 ![tt](../../pictures/So-how-do-you-keep-your-data-secure.png)
+
+Additionally, Contoso Shipping has some out-of-network devices that are part of your operations. You are using network-enabled sensors in your drones that send data to Azure Event Hubs, while delivery drivers use mobile apps to get route maps and record signatures for receipt of shipments. These devices and apps must be securely authenticated before data can be sent to or from them.
+
+So how do you keep your data secure?
+
+Azure Event Hubs allow you to receive and process millions of events of real-time data each second via dynamic data pipelines. Event Hubs also integrates seamlessly with other Azure services.
+
+Learning objectives
+
+|In this module, you will learn how:|
+|-----------------------------------------------|
+|Security responsibility is shared with Azure|
+|Identity management provides protection, even outside your network|
+|Encryption capabilities built into Azure can protect your data|
+|To protect your network and virtual networks|
+
+Prerequisites
+None
+
+Next unit: Cloud security is a shared responsibility
+
+## Cloud security is a shared responsibility
+11 minutes
+Organizations face many challenges with securing their datacenters, including recruiting and keeping security experts, using many security tools, and keeping pace with the volume and complexity of threats. As computing environments move from customer-controlled datacenters to the cloud, the responsibility of security also shifts. Security of the operational environment is now a concern shared by both cloud providers and customers. By shifting these responsibilities to a cloud service like Azure, organizations can reduce focus on activities that aren't core business competencies. Depending on the specific technology choices, some security protections will be built into the particular service, while addressing others will remain the customer's responsibility. To ensure that the proper security controls are provided, a careful evaluation of the services and technology choices becomes necessary.
+
+![tt](../../pictures/Understand_security_threats.png)
+
+
+## Security is a shared responsibility
+
+![tt](../../pictures/Security-is-a-shared-responsibility_00.png)
+![tt](../../pictures/Security-is-a-shared-responsibility_01.png)
+![tt](../../pictures/Security-is-a-shared-responsibility_02.png)
+![tt](../../pictures/Security-is-a-shared-responsibility_03.png)
+![tt](../../pictures/Security-is-a-shared-responsibility_04.png)
+![tt](../../pictures/Security-is-a-shared-responsibility_05.png)
+![tt](../../pictures/Security-is-a-shared-responsibility_06.png)
+![tt](../../pictures/Security-is-a-shared-responsibility_07.png)
+![tt](../../pictures/Security-is-a-shared-responsibility_08.png)
