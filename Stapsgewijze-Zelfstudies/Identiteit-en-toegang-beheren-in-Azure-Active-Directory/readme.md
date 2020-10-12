@@ -70,3 +70,4 @@ Evaluate options to manage device identities in Azure AD. Allow users to join de
 18 min Module 5 Units
  
 Add your custom domain to Azure Active Directory. Add DNS information to the domain registrar. Verify your custom domain name in the Azure portal and set it as the primary.
+
