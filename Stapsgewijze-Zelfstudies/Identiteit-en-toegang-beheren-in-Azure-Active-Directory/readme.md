@@ -24,8 +24,9 @@ Module 11 Units
 Discuss the basic concepts for protecting your infrastructure and data when you work in the cloud. Understand what responsibilities are yours and what Azure takes care of for you.
 
 
-## 2 Create an Azure account 39 min
+## 2 Create an Azure account 
 
+39 min
 7 Units  4.7 (134,083)
 The first step to using Azure is to sign up. You may sign up directly through Azure.com, with the help of a Microsoft representative, or through a partner. If you’re new to Azure, you may sign up for an Azure free account to start exploring with $200 USD free credit and free services.
 

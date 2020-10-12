@@ -614,40 +614,36 @@ Get started with Key Vault certificates
 Check your knowledge
 1. Cloud security is a shared responsibility between you and your cloud provider. Which category of cloud services requires the greatest security effort on your part?
 
-Infrastructure as a service (IaaS)
+|x|Infrastructure as a service (IaaS)|
+||Platform as a service (PaaS)|
+||Software as a service (SaaS)|
 
-Platform as a service (PaaS)
-
-Software as a service (SaaS)
 2. Which of these options helps you most easily disable an account when an employee leaves your company?
 
-Enforce multi-factor authentication (MFA)
+||Enforce multi-factor authentication (MFA)|
+||Monitor sign-on attempts|
+|x|Use single sign-on (SSO)|
 
-Monitor sign-on attempts
-
-Use single sign-on (SSO)
 3. Which of these approaches is the strongest way to protect sensitive customer data?
 
-Encrypt data as it sits in your database
+||Encrypt data as it sits in your database|
+||Encrypt data as it travels over the network|
+|x|Encrypt data both as it sits in your database and as it travels over the network|
 
-Encrypt data as it travels over the network
-
-Encrypt data both as it sits in your database and as it travels over the network
 4. There has been an attack on your public-facing website, and the application's resources have been overwhelmed and exhausted, and are now unavailable to users. What service should you use to prevent this type of attack?
 
-DDoS protection
-
-Azure Firewall
-
-Network Security Group
+|x|DDoS protection|
+||Azure Firewall|
+||Network Security Group|
 
 Application Gateway
 5. You want to store certificates in Azure to centrally manage them for your services. Which Azure service should you use?
 
-AIP
+||AIP|
+||Azure AD|
+|x|Azure Key Vault|
+||Azure ATP|
 
-Azure AD
 
-Azure Key Vault
+https://docs.microsoft.com/en-us/learn/browse/
 
-Azure ATP
