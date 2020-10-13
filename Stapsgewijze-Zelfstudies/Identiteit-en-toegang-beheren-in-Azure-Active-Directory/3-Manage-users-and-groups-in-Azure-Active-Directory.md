@@ -30,7 +30,7 @@ Learning objectives
 
 While they share a similar name, Azure AD is not a cloud version of Windows Server Active Directory. It's also not intended as a complete replacement for an on-premises Active Directory. Instead, if you are already using a Windows AD server, you can connect it to Azure AD to extend your directory into Azure. This approach allows users to use the same credentials to access local and cloud-based resources.
 
-![tt](../../What-is-Azure-Active-Directory.png)
+![tt](../../pictures/What-is-Azure-Active-Directory.png)
 
 Azure AD can also be used independently of Windows AD. Smaller companies can use Azure AD as their only directory service, using it to control access to their applications and SaaS products such as Microsoft 365, Salesforce, and Dropbox.
 
@@ -333,4 +333,173 @@ az ad user create --display-name "Abby Brown" \
 ````
 
 ![tt](../../pictures/az-cli_ad_user_create.png)
+
+
+Command-line tools allow you to add users in bulk through scripting. The most common approach for this is to use a comma-separated values file (CSV). You can either manually create this file or export the file from an existing data source.
+
+If you're planning to use a CSV, here are some things to think about:
+
+Naming conventions. Establish or implement a naming convention for usernames, display names, and aliases. For example, a username might consist of the last name, followed by a period (.), followed by the first name—for example, Smith.John@contoso.com.
+
+Passwords. Implement a convention for the initial password of a newly created user. Determine how new users will receive their passwords in a security-enhanced way. A commonly used method is generating a random password and then emailing it to the new user or their manager.
+
+|To use a CSV with Azure PowerShell:|
+|--------------------------------------------|
+|Use Connect-AzureAD to create an Azure PowerShell connection to your directory. Connect with an admin account that has privileges on your directory.|
+|Create new password profiles for the new users. The passwords for the new users need to conform to the password complexity rules you have set for your directory.|
+|Use Import-CSV to import the CSV. You need to specify the path and file name of the CSV.|
+|Loop through the users in the file, constructing the user parameters needed for each user. Example parameters are User Principal Name, Display Name, Given Name, ||Department, and Job Title.|
+
+Use New-ADUser to create each user. Be sure to enable each account.
+
+## Other options
+You can also add users to Azure AD programmatically using the Azure AD Graph API, or through the Microsoft 365 Admin Center and the 
+Microsoft Intune Admin console if you are sharing the same directory.
+
+Next unit: Create and manage groups
+
+
+## 4 Create Azure users and groups in Azure Active Directory
+
+
+## Create and manage groups
+8 minutes
+An Azure AD group helps organize users making it easier to manage permissions. Using groups lets the resource owner (or Azure AD directory owner), assign a set of access permissions to all the members of the group, instead of having to provide the rights one-by-one. Groups allow us to define a security boundary and then add and remove specific users to grant or deny access with a minimum amount of effort. Even better, Azure AD supports the ability to define membership based on rules - such as what department a user works in, or the job title they have.
+
+Azure AD allows you to define two different types of groups.
+
+Security groups. These are the most common and are used to manage member and computer access to shared resources for a group of users. For example, you can create a security group for a specific security policy. By doing it this way, you can give a set of permissions to all the members at once, instead of having to add permissions to each member individually. This option requires an Azure AD administrator.
+
+Microsoft 365 groups. These groups provide collaboration opportunities by giving members access to a shared mailbox, calendar, files, SharePoint site, and more. This option also lets you give people outside of your organization access to the group. This option is available to users as well as admins.
+
+Viewing available groups
+You can view all groups through the Groups item under the Manage group from the Azure AD dashboard. A new Azure AD install won't have any groups defined.
+
+![tt](../../pictures/Viewing-available-groups.png)
+
+## Adding groups to Azure AD
+The same options are available to create groups in Azure AD as we saw with users. The Azure portal is the easiest way to create groups. You must select the group type (Security or Microsoft 365), assign a unique group name, description and a membership type.
+
+
+![tt](../../pictures/Adding_groups_to_Azure_AD.png)
+
+
+|The membership type field can be one of three values:|
+|Assigned. The group will contain specific users or groups that you select.|
+|Dynamic user. You create rules based on characteristics to enable attribute-based dynamic memberships for groups. For example, if a user’s department is Sales, that user will be dynamically assigned to the Sales group. You can set up a rule for dynamic membership on security groups or on Office 365 groups. If the user's department changes in the future, they are automatically removed from the group. This feature requires an Azure AD Premium P1 license.|
+|Finally, you can select group owner(s) that can administer the group, and member(s) that will belong to the group. Both of these can contain other groups as well as individual users.|
+
+## Scripting group creation
+You can also use Azure PowerShell to add a group using the New-AzureADGroup command as shown below.
+
+````
+New-AzureADGroup -Description "Marketing" -DisplayName "Marketing" -MailEnabled $false -SecurityEnabled $true -MailNickName "Marketing"
+````
+
+## Changing the membership for a group
+Once a group is created, you can add or remove users (or groups) from it by editing the group membership by selecting the group and using the options under the Manage section.
+
+![tt](../../pictures/changing-the-membership-for-a-group.png)
+
+## Next unit: Use roles to control resource access
+
+Use roles to control resource access
+10 minutes
+Built-in Roles for Azure Resources (USES POWERSHELL)
+Azure AD provides several built-in roles to cover the most common security scenarios. To understand how the roles work, let's examine three roles that apply to all resource types:
+
+Owner, which has full access to all resources, including the right to delegate access to others.
+Contributor, which can create and manage all types of Azure resources but can’t grant access to others.
+Reader, which can view existing Azure resources.
+Role definitions
+Each role is a set of properties defined in a JavaScript Object Notation (JSON) file. This role definition includes a Name, Id, and Description. It also includes the allowable permissions (Actions), denied permissions (NotActions), and scope (for example, read access) for the role.
+
+For the Owner role, that means all actions, indicated by an asterisk (*); no denied actions; and all scopes, indicated by a forward slash (/).
+
+You can get this information using the Powershell Get-AzureRmRoleDefinition cmdlet. Try typing the following command into the Cloud Shell on the right.
+
+````
+Get-AzureRmRoleDefinition -Name Owner
+````
+
+![tt](../../pictures/Get-AzureRmRoleDefinition.png)
+
+
+
+## Examine the built-in roles
+
+|Next, let's explore some of the other built-in roles.|
+|[Open the Azure portal](https://portal.azure.com/#home) |
+|Select Resource groups from the left sidebar.|
+|Select the resource group.|
+|Select the Access control (IAM) item from the sidebar menu.|
+|Select the Roles tab as shown below to see the list of available roles.|
+
+
+![tt](../../pictures/AccessControl_IAM.png)
+
+## What's a role definition?
+A role definition is a collection of permissions. It's sometimes just called a role. A role definition lists the operations that can be performed, such as read, write, and delete. It can also list the operations that can't be performed or operations related to underlying data.
+
+
+![tt](../../pictures/role_definition.png)
+
+
+This structure is represented as JSON when used in role-based access control (RBAC) or from the underlying API. For example, here's the Contributor role definition in JSON format.
+
+````
+{
+  "Name": "Contributor",
+  "Id": "b24988ac-6180-42a0-ab88-20f7382dd24c",
+  "IsCustom": false,
+  "Description": "Lets you manage everything except access to resources.",
+  "Actions": [
+    "*"
+  ],
+  "NotActions": [
+    "Microsoft.Authorization/*/Delete",
+    "Microsoft.Authorization/*/Write",
+    "Microsoft.Authorization/elevateAccess/Action"
+  ],
+  "DataActions": [],
+  "NotDataActions": [],
+  "AssignableScopes": [
+    "/"
+  ]
+}
+````
+## Actions and NotActions
+
+You can tailor the Actions and NotActions properties to grant and deny the exact permissions you need. These are always in the format: {Company}.{ProviderName}/resourceType}/{action}.
+As an example, here are the actions for the three roles we looked at previously.
+
+![tt](../../pictures/Actions-and-NotActions.png)
+
+
+he wildcard (*) operation under Actions indicates that the principal assigned to this role can perform all actions, or in other words, it can manage everything. This includes actions defined in the future, as Azure adds new resource types. In the case of the Reader role, only the read action is allowed.
+
+The operations under NotActions are subtracted from Actions. In the case of the Contributor role, NotActions removes this role's ability to manage access to resources and also assign access to resources.
+
+DataActions and NotDataActions
+Data operations are specified in the DataActions and NotDataActions properties. This allows data operations to be specified separately from the management operations. This prevents current role assignments with wildcards (*) from suddenly having access to data. Here are some data operations that can be specified in DataActions and NotDataActions:
+
+Read a list of blobs in a container
+Write a storage blob in a container
+Delete a message in a queue
+Only data operations can be added to the DataActions and NotDataActions properties. Resource providers identify which operations are data operations by setting the isDataAction property to true. Roles that do not have data operations can omit these properties from the role definition.
+
+These actions work exactly like their management cousins. You specify actions you want to allow (or * for all) and then provide a list of specific actions to remove in the NotDataActions collection. Here are some examples, you can find the [full list](https://docs.microsoft.com/en-us/azure/role-based-access-control/resource-provider-operations) of actions and data actions in the resource provider documentation:
+
+Creating roles
+As you can see, Azure AD comes with a bunch of built-in roles that likely cover 99% of what you'll ever want to do. You should prefer to use a built-in role if possible. However, you can create custom roles if you find it necessary to do so.
+
+ Note
+
+Custom role creation requires Azure AD Premium P1 or P2 and cannot be done in the free tier.
+Creating a new role can be done through several mechanisms:
+Azure portal. You can use the Azure portal to create a custom role - Azure Active Directory > Roles and administrators > New custom role.
+Azure PowerShell. You can use the New-AzureADMSRoleDefinition cmdlet to define a new role.
+Azure Graph API. You can use a REST call to the Graph API to programmatically create a new role.
+The summary includes a link to the documentation for all three approaches.
+
 
