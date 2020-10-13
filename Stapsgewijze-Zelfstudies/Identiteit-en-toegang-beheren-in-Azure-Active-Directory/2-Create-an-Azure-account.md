@@ -3,6 +3,8 @@
 [tt](https://docs.microsoft.com/nl-nl/learn/azure/?wt.mc_id=azurepaygday10_freetraining_tutorials-email-rm)
 [create-an-azure-account](https://docs.microsoft.com/en-us/learn/modules/create-an-azure-account/)
 
+
+
 The first step to using Azure is to sign up. You may sign up directly through Azure.com, with the help of a Microsoft representative,
  or through a partner. If you’re new to Azure, you may sign up for an Azure free account to start exploring 
  with $200 USD free credit and free services.

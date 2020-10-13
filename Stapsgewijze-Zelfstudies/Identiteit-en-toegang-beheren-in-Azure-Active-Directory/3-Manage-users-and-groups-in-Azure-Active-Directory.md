@@ -9,7 +9,7 @@ Learning objectives
 |---------------------------------------------------|
 |Learn the difference between Azure AD and Windows Server Active Directory|
 |Understand tenants, subscriptions, and users|
-|Create a new Azure Active Directory|
+|[Create a new Azure Active Directory](https://docs.microsoft.com/en-us/learn/modules/manage-users-and-groups-in-aad/2-create-aad)|
 |Add users and groups to an Azure AD|
 |Manage roles in an Azure AD|
 |Learn how to create a hybrid identity solution with Azure AD Connect|
@@ -69,7 +69,7 @@ Creating a new directory
 An organization (tenant) always has one default Azure AD directory it's associated with, however owners can create additional directories to support development or testing purposes, or because they want to have separate directories to synchronize with their local Windows Server AD forests.
 
 Important
-The steps to create a new directory are shown below, however unless you are an owner of your Azure account, this option won't be available to you. The Azure Sandbox doesn't allow you to create new Azure AD directories.
+[The steps to create a new directory are shown below](https://docs.microsoft.com/en-us/learn/modules/manage-users-and-groups-in-aad/2-create-aad), however unless you are an owner of your Azure account, this option won't be available to you. The Azure Sandbox doesn't allow you to create new Azure AD directories.
 
 
 |step| the steps to create a new directory |
@@ -99,15 +99,29 @@ Built for ease of use, Azure Active Directory enables enterprise mobility and co
 |3|Choose a name for the directory that will help distinguish it from your other directories. If the directory you're creating is to be used in production, choose a name for the directory that your users will recognize as the name of your organization. You can change the name later if you want.|
 
 
+
+![tt](../../pictures/create_discipl_aad_00.png)
+![tt](../../pictures/create_discipl_aad_01.png)
+![tt](../../pictures/create_discipl_aad_02.png)
+![tt](../../pictures/create_discipl_aad_03.png)
+![tt](../../pictures/create_discipl_aad_04.png)
+
+
+
+
+
 |step| the steps to create a new directory |
+|------|------------------------------------------------------|
 |4|Enter the domain name associated with it. The domain must not be known to Azure or you will get a validation error. The default domain name will always have the suffix .onmicrosoft.com. While this default domain cannot be changed, later you can add a custom domain owned by your organization so defined users can use a traditional company email such as john@contoso.com.|
 
 
 |step| the steps to create a new directory |
+|------|------------------------------------------------------|
 |5|Select the country the directory should reside in. This will identify the region and data center where the Azure AD instance will live and it cannot be changed later.|
 
 
 |step| the steps to create a new directory |
+|------|------------------------------------------------------|
 |6|Select Create to create the new directory. This will create a free tier directory where you can add users, create roles, register apps and devices, and control licenses.|
 
 
