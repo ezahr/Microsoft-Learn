@@ -79,6 +79,7 @@ The steps to create a new directory are shown below, however unless you are an o
 ![tt](../../pictures/Sign-into-the-Azure-portal-https-porta-azure-com-home.png)
 
 
+|------|------------------------------------------------------|
 |2|Select Create a resource from the left sidebar, Identity from the Azure Marketplace, and then Azure Active Directory from the list.|
 
 
@@ -92,6 +93,7 @@ Built for ease of use, Azure Active Directory enables enterprise mobility and co
 ![tt](../../pictures/Identity-and-Access-Management-as-a-service-IDaaS.png)
 
 
+|------|------------------------------------------------------|
 |3|Choose a name for the directory that will help distinguish it from your other directories. If the directory you're creating is to be used in production, choose a name for the directory that your users will recognize as the name of your organization. You can change the name later if you want.|
 |4|Enter the domain name associated with it. The domain must not be known to Azure or you will get a validation error. The default domain name will always have the suffix .onmicrosoft.com. While this default domain cannot be changed, later you can add a custom domain owned by your organization so defined users can use a traditional company email such as john@contoso.com.|
 |5|Select the country the directory should reside in. This will identify the region and data center where the Azure AD instance will live and it cannot be changed later.|
