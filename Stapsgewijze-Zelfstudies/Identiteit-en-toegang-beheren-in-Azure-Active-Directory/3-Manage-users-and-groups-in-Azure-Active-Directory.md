@@ -196,3 +196,141 @@ Once the directory is created, you can navigate to the dashboard that lets you c
 
 Next unit: Create and manage users
 
+## Create and manage users
+
+    8 minutes
+
+Every user who needs access to Azure resources needs an Azure user account. A user account contains all the information needed to authenticate the user during the sign-on process. Once authenticated, Azure AD builds an access token to authorize the user and determine what resources they can access and what they can do with those resources.
+
+You use the Azure Active Directory dashboard in the Azure portal to work with user objects. Keep in mind that you can only work with a single directory at a time - but you can use the Directory + Subscription panel to switch directories. The dashboard also has a Switch directory button in the toolbar which makes it easy to switch to another available director
+
+
+## Viewing users
+
+To view the Azure AD users, select the Users entry under the Manage group - this will open the All Users view. Take a minute to access the portal and view your users. Notice the USER TYPE and SOURCE columns, as the following figure depicts.
+
+Screenshot that depicts the All users pane, with the USER TYPE and SOURCE columns noted.
+
+
+|way|Typically, Azure AD defines users in three ways:|
+|-------------------|-------------------------------------------------------------------|
+|Cloud identities -| These users exist only in Azure AD. Examples are administrator accounts and users that you manage yourself. Their source is Azure Active Directory or External Azure Active Directory if the user is defined in another Azure AD instance but needs access to subscription resources controlled by this directory. When these accounts are removed from the primary directory, they are deleted.
+|  Directory-synchronized identities |- These users exist in an on-premises Active Directory. A synchronization activity that occurs via Azure AD Connect brings these users in to Azure. Their source is Windows Server AD.|
+|Guest users -| These users exist outside Azure. Examples are accounts from other cloud providers and Microsoft accounts such as an Xbox LIVE account. Their source is Invited user. This type of account is useful when external vendors or contractors need access to your Azure resources. Once their help is no longer necessary, you can remove the account and all of their access.|
+
+
+
+
+
+![tt](../../pictures/viewing_users0.png
+![tt](../../pictures/viewing_users.png
+![tt](../../pictures/viewing_my_users.png
+![tt](../../pictures/view_peter_bosch.png
+
+## Use roles to control resource access
+10 minutes
+Built-in Roles for Azure Resources (USES POWERSHELL)
+Azure AD provides several built-in roles to cover the most common security scenarios. To understand how the roles work, let's examine three roles that apply to all resource types:
+
+Owner, which has full access to all resources, including the right to delegate access to others.
+Contributor, which can create and manage all types of Azure resources but can’t grant access to others.
+Reader, which can view existing Azure resources.
+Role definitions
+Each role is a set of properties defined in a JavaScript Object Notation (JSON) file. This role definition includes a Name, Id, and Description. It also includes the allowable permissions (Actions), denied permissions (NotActions), and scope (for example, read access) for the role.
+For the Owner role, that means all actions, indicated by an asterisk (*); no denied actions; and all scopes, indicated by a forward slash (/).
+You can get this information using the Powershell Get-AzureRmRoleDefinition cmdlet. Try typing the following command into the Cloud Shell on the right.
+
+
+![tt](../../pictures/Get-AzureRmRoleDefinition-Name_Owner.png)
+
+Examine the built-in roles
+
+|Next, let's explore some of the other built-in roles.|
+|----------------------------------------------|
+|Open the Azure portal |
+|Select Resource groups from the left sidebar.|
+
+![tt](../../pictures/Get-AzureRmRoleDefinition-Name_Owner.png
+![tt](../../pictures/resource_group.png
+
+|Next, let's explore some of the other built-in roles.|
+|----------------------------------------------|
+|Select the resource group.|
+
+
+|Next, let's explore some of the other built-in roles.|
+|----------------------------------------------|
+|Select the Access control (IAM) item from the sidebar menu.|
+
+|Next, let's explore some of the other built-in roles.|
+|----------------------------------------------|
+|Select the Roles tab as shown below to see the list of available roles.|
+
+
+## Adding users
+You can add cloud identities to Azure AD in multiple ways:
+
+## Syncing an on-premises Windows Server Active Directory
+Azure AD Connect is a separate service that allows you to synchronize a traditional Active Directory with your Azure AD instance. This is how most enterprise customers add users to the directory. The advantage to this approach is users can use single-sign-on (SSO) to access local and cloud-based resources.
+
+
+
+## https://endpoint.microsoft.com
+
+
+![tt](../../pictures/Get-AzureRmRoleDefinition-Name_Owner.png)
+![tt](../../pictures/my_endpoint-microsoft-com.png)
+![tt](../../pictures/resource_group.png)
+![tt](../../pictures/use_portal_users.png)
+
+
+In addition to Name and User name, you can add profile information, like Job Title and Department.
+
+![tt](../../pictures/create_user.png)
+
+
+The default behavior is to create a new user in the organization. The user will have a username with the default domain name assigned to the directory such as alice@staracoustics.onmicrosoft.com.
+
+You can also invite a user into the directory. In this case, an email is sent to a known email address and an account is created and associated with that email address if they accept the invitation.
+
+![tt](../../pictures/create_user_invite.png)
+
+
+The invited user will need to create an associated Microsoft account (MSA) if that specific email address isn't associated with one and the account will be added to the Azure AD as a guest user.
+
+## Use the command line
+If you have a lot of users to add, a better option is to use a command-line tool. You can use the New-AzureADUser Azure PowerShell command to add cloud-based users.
+
+````
+# Create a password object
+$PasswordProfile = New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
+
+# Assign the password
+$PasswordProfile.Password = "<Password>"
+
+# Create the new user
+New-AzureADUser -AccountEnabled $True -DisplayName "Abby Brown" -PasswordProfile $PasswordProfile -MailNickName "AbbyB" -UserPrincipalName "AbbyB@contoso.com"
+````
+
+````
+The command will return the new user object you created.
+Output
+Copy
+ObjectId                             DisplayName UserPrincipalName UserType
+--------                             ----------- ----------------- --------
+f36634c8-8a93-4909-9248-0845548bc515 Abby Brown  AbbyB@contoso.com Member
+````
+
+
+If you prefer a more traditional command-line, you can use the Azure CLI:
+
+````
+az ad user create --display-name "Abby Brown" \
+                  --password "<password>" \
+                  --user-principal-name "AbbyB@contoso.com" \
+                  --force-change-password-next-login true \
+                  --mail-nickname "AbbyB"
+````
+
+![tt](../../pictures/az-cli_ad_user_create.png)
+

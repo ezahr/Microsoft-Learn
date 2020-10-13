@@ -1,7 +1,7 @@
 # Microsoft-Learn
 Ontwikkel uw Azure-vaardigheden  Breid uw vaardigheden voor Azure uit op uw eigen tempo, met mogelijkheden van Microsoft Learn die passen bij uw stijl en planning. En het is gratis.
-
-
+Azure AD Connect is een aparte service waarmee u een traditionele Active Directory kunt synchroniseren met uw Azure AD-instance
+https://docs.microsoft.com/nl-nl/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager
 
 ## Training en resources zijn onder andere:
 
