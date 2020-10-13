@@ -14,7 +14,11 @@ Security Engineer
 Azure
 CLIs
 Azure Portal
-Azure Active Directory
+
+## Azure Active Directory
+
+Met Azure Active Directory kunt u werken op afstand mogelijk maken voor uw werknemers en partners. Leer meer
+
 Learn how to work with subscriptions, users, and groups by configuring Microsoft Azure Active Directory for workloads. This learning path can help you prepare for the Microsoft Certified: Azure Security Engineer Associate certification.
 
 
