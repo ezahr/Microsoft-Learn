@@ -75,7 +75,23 @@ The steps to create a new directory are shown below, however unless you are an o
 |step| the steps to create a new directory |
 |------|------------------------------------------------------|
 |1|Sign into the Azure portal .|
+
+![tt](../../pictures/Sign-into-the-Azure-portal-https-porta-azure-com-home.png)
+
+
 |2|Select Create a resource from the left sidebar, Identity from the Azure Marketplace, and then Azure Active Directory from the list.|
+
+
+![tt](../../pictures/AZ_resource_Azure_Active_Directory_from_the_list.png)
+
+````
+Azure Active Directory is an Identity and Access Management as a service (IDaaS) solution that extends your on-premises directories into the cloud and provides single sign-on to Azure, Office 365 and thousands of cloud (SaaS) apps and access to web apps you run on-premises.
+Built for ease of use, Azure Active Directory enables enterprise mobility and collaboration and delivers advanced identity protection through multi-factor authentication (MFA), security reports, audits, alerts and adaptive conditional access policies based on device health, user location and risk level.
+````
+
+![tt](../../pictures/Identity-and-Access-Management-as-a-service-IDaaS.png)
+
+
 |3|Choose a name for the directory that will help distinguish it from your other directories. If the directory you're creating is to be used in production, choose a name for the directory that your users will recognize as the name of your organization. You can change the name later if you want.|
 |4|Enter the domain name associated with it. The domain must not be known to Azure or you will get a validation error. The default domain name will always have the suffix .onmicrosoft.com. While this default domain cannot be changed, later you can add a custom domain owned by your organization so defined users can use a traditional company email such as john@contoso.com.|
 |5|Select the country the directory should reside in. This will identify the region and data center where the Azure AD instance will live and it cannot be changed later.|
