@@ -32,3 +32,14 @@ https://docs.microsoft.com/nl-nl/mem/intune/fundamentals/tutorial-walkthrough-en
 	
 ## Pluralsight-evaluatie van vaardigheden: 
 [meet uw bekwaamheid met Azure, identificeer gaten in uw kennis en ontvang cursusaanbevelingen om u voor te bereiden op op rollen gebaseerde certificeringen.](https://www.pluralsight.com/partners/microsoft/azure)
+
+
+
+https://www.microsoft.com/en-us/microsoft-365/blog/2017/06/12/azure-ad-makes-the-leader-quadrant-in-gartners-2017-magic-quadrant-for-access-management/
+
+have great news to share with you today! Gartner released their 2017 Magic Quadrant for Access Management (AM MQ), which shows that Microsoft is placed in the leaders quadrant for our completeness of vision and ability to execute.
+The AM MQ is a new MQ. It is a separate entity from the discontinued IDaaS MQ and this is the first time it has been published. Azure Active Directory is the product evaluated in the report.
+
+
+
+

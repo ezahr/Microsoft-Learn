@@ -352,3 +352,8 @@ Select Members > Add members.
 
 ![tt](../../pictures/https-aad-portal-azure-com_00.png)
 
+![tt](../../pictures/hcompany_branding2.png)
+![tt](../../pictures/hcompany_branding3.png)
+![tt](../../pictures/hcompany_branding4.png)
+![tt](../../pictures/hcompany_branding.png)
+
