@@ -3,7 +3,6 @@
 https://docs.microsoft.com/en-us/learn/modules/create-users-and-groups-in-azure-active-directory/
 
 
-
 41 min Module 8 Units Beginner Administrator Azure Azure Active Directory
 Create users in Azure Active Directory. Understand different types of groups. Create a group and add members. Manage business-to-business guest accounts.
 
@@ -356,4 +355,75 @@ Select Members > Add members.
 ![tt](../../pictures/hcompany_branding3.png)
 ![tt](../../pictures/hcompany_branding4.png)
 ![tt](../../pictures/hcompany_branding.png)
+
+## unit 6 Collaborate by using guest accounts and Azure Active Directory B2B
+5 minutes
+You want the external team to collaborate with the internal developer team in a process that's easy and secure. With Azure Active Directory (Azure AD) business to business (B2B), you can add people from other companies to your Azure AD tenant as guest users.
+
+If your organization has multiple Azure AD tenants, you may also want to use Azure AD B2B to give a user in tenant A access to resources in tenant B. Each Azure AD tenant is distinct and separate from other Azure AD tenants and has its own representation of identities and app registrations.
+
+Guest user access in Azure AD B2B
+In any scenario where external users need temporary or restricted access to your organization's resources, give them guest user access. You can grant guest user access with the appropriate restrictions in place. Then remove access when the work is done.
+
+You can use the Azure portal to invite B2B collaboration users. Invite guest users to the Azure AD organization, group, or application. After you invite a user, their account is added to Azure AD as a guest account.
+
+The guest can get the invitation through email. Or you can share the invitation to an application by using a direct link. The guest then redeems their invitation to access the resources.
+
+By default, users and administrators in Azure AD can invite guest users. But this ability can be limited or disabled by the Global Administrator.
+
+Collaborate with any partner by using their identities
+If your organization has to manage the identities of each external guest user who belongs to a given partner organization, it faces increased responsibilities--because it has to secure those identities. There's an increased workload to manage and administer those identities. You also have to sync accounts, manage the life cycle of each account, and track each individual external account to meet your obligations. Your organization has to follow this procedure for every partner organization it wants to collaborate with. Also, if something happens to those accounts, your organization is liable.
+
+With Azure Active Directory B2B, you don't have to manage your external users' identities. The partner has the responsibility to manage its own identities. External users continue to use their current identities to collaborate with your organization.
+
+For example, say you work with the external partner Giovanna Carvalho at Proseware. Her organization manages her identity as gcarvalho@proseware.com. You use that identity for the guest account in your organization's Azure AD. After Giovanna redeems the guest account invitation, she uses the same identity (name and password) for the guest account as she does for her organization.
+
+Why use Azure AD B2B instead of federation?
+With Azure AD B2B, you don't take on the responsibility of managing and authenticating the credentials and identities of partners. Your partners can collaborate with you even if they don't have an IT department. For example, you can collaborate with a contractor who only has a personal or business email address and no identity management solution managed by an IT department.
+
+Giving access to external users is much easier than in a federation. You don't need an AD administrator to create and manage external user accounts. Any authorized user can invite other users. A line manager could, for example, invite external users to collaborate with their team. When collaboration is no longer needed, these external users can easily be removed.
+
+A federation is more complex. A federation is where you have a trust established with another organization, or a collection of domains, for shared access to a set of resources. You might be using an on-premises identity provider and authorization service like Active Directory Federation Services (AD FS) that has an established trust with Azure AD. To get access to resources, all users have to provide their credentials and successfully authenticate against the AD FS server. If you have someone trying to authenticate outside the internal network, you need to set up a web application proxy. The architecture might look something like the following diagram:
+
+![tt](../../pictures/Azure_AD_B2B_instead_of_federation.png)
+
+An on-premises federation with Azure AD might be good if your organization wants all authentication to Azure resources to happen in the local environment. Administrators can implement more rigorous levels of access control. But this means that, if your local environment is down, users can't access the Azure resources and services they need.
+
+With a B2B collaboration, external teams get the required access to Azure resources and services with the appropriate permissions. There's no need for a federation and trust to be established, and authentication doesn't depend on an on-premises server. Authentication is done directly through Azure. Collaboration becomes simplified, and you don't have to worry about situations where users can't sign in because an on-premises directory isn't available.
+
+Next unit: Exercise - Give guest users access in Azure Active Directory B2B
+
+Exercise - Give guest users access in Azure Active Directory B2B
+
+This module requires a sandbox to complete. A sandbox gives you access to Azure resources. Your Azure subscription will not be charged. The sandbox may only be used to complete training on Microsoft Learn. Use for any other reason is prohibited, and may result in permanent loss of access to the sandbox.
+Due to the impact of the global health pandemic, Azure resources are being prioritized towards health and safety organizations. You may experience some issues when you deploy resources used in the exercises. Please try again or choose a different region. For more information, see Azure blog post - Update #3: Business continuity with Azure.
+
+The external and internal developer teams want to work together, so you decide to create guest user access for the external developer team.
+
+You'll use the Azure portal to invite business-to-business (B2B) collaboration users. You can invite guest users to an Azure Active Directory (Azure AD) organization, group, or application. After you invite a user, their account is added to Azure AD, with a guest user type.
+
+After you add a guest user to the organization, send them a direct link to a shared app. Have the guest user open the redemption URL in the invitation email.
+
+## Add guest users to the organization
+Sign in to the Azure portal .
+
+![tt](../../pictures/Add-gues- users-to-the-organization.png)
+
+Select Azure Active Directory > Users > New guest user
+
+## Add guest users to a group
+In your Azure AD organization, select Groups and then select Developer group in the list of groups.
+Select Members > Add members.
+Search for the guest account you added to the organization.
+Select the account, and click Select.
+You now see the user in the list of members for this group.
+You've now added a guest user to a group.
+
+
+![tt](../../pictures/Add-guest-users-to-an-application.png)
+
+![tt](../../Add-guest-users-to-an-application2.png)
+
+
+![tt](../../Add-guest-users-to-an-application3.png)
 
