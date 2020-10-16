@@ -206,3 +206,103 @@ Go to the Azure portal .
 On the Azure portal menu or from the Home page, select Create a resource.
 
 Select the Identity category, and then select Azure Active Directory.
+
+
+Azure Cloud Shell
+
+This module requires a sandbox to complete. A sandbox gives you access to Azure resources. Your Azure subscription will not be charged. The sandbox may only be used to complete training on Microsoft Learn. Use for any other reason is prohibited, and may result in permanent loss of access to the sandbox.
+
+authenticate users
+10 minutes
+This module requires a sandbox to complete. A sandbox gives you access to Azure resources. Your Azure subscription will not be charged. The sandbox may only be used to complete training on Microsoft Learn. Use for any other reason is prohibited, and may result in permanent loss of access to the sandbox.
+Due to the impact of the global health pandemic, Azure resources are being prioritized towards health and safety organizations. You may experience some issues when you deploy resources used in the exercises. Please try again or choose a different region. For more information, see Azure blog post - Update #3: Business continuity with Azure.
+
+You can use the Azure CLI to deploy and test an application that uses OpenID Connect.
+
+You previously registered the application in Azure Active Directory (Azure AD). You can now deploy and run the application and see if the authentication works.
+
+In this exercise, you'll configure an application to authenticate users against your Azure AD tenant and deploy the web app.
+
+Configure and deploy the application that uses OpenID Connect to authenticate users
+Run the following command in Azure Cloud Shell to clone the repo that contains the source for our app.
+
+````
+git clone https://github.com/MicrosoftDocs/mslearn-secure-app-with-oidc-and-azure-ad.git
+````
+
+````
+cd ~/mslearn-secure-app-with-oidc-and-azure-ad/app/
+````
+
+````
+code appsettings.json
+````
+
+
+
+````
+{
+  "AzureAd": {
+    "Instance": "https://login.microsoftonline.com/",
+    "Domain": "<domain-name>.onmicrosoft.com",
+    "TenantId": "<TenantID-GUID>",
+    "ClientId": "<ClientID-GUID>",
+    "CallbackPath": "/signin-oidc"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}
+
+````
+
+
+Select Ctrl+S to save the file and Ctrl+Q to close the code editor.
+
+Run the following command to build and deploy the initial web app.
+
+Azure CLI
+
+Copy
+az webapp up \
+    --resource-group [Sandbox resource group] \
+    --location centralus \
+    --sku F1 \
+    --name educationapp-$RANDOM
+Copy the URL from the command output. You'll need this address to configure the app registration.
+
+Configure the app registration
+Now let's configure the app registration to authorize the URL of the web service:
+
+In the Azure portal , select your user name in the upper-right corner, and then select Switch directory. Choose the Learn Module AAD Tenant directory that you created earlier. Sign in if you're prompted.
+
+In the left pane, select Azure Active Directory.
+
+Under Manage, select App registrations. Then select the WebApp-OpenIDConnect-DotNet registration that you created in the previous exercise.
+
+Select Authentication.
+
+Paste the URL from the Cloud Shell output in the previous section into the Redirect URIs area, and append the suffix /signin-oidc. Ensure that the URL uses HTTPS.
+
+Delete the redirect URI https://localhost:5000/signin-oidc.
+
+Paste the same URL into the Logout URL field, and append the suffix /signout-oidc.
+
+Under Implicit grant, select ID tokens.
+
+Select Save.
+
+## https://aad.portal.azure.com/#@boschpeteroutlook.onmicrosoft.com/dashboard/private/31d09266-3ccf-4378-943b-c4973e8b0019
+
+
+![tt](./../pictures/Secure-your-application-by-using-OpenID-Connect-and-Azure-AD1.png)
+
+![tt](./../pictures/ictures/Secure-your-application-by-using-OpenID-Connect-and-Azure-AD2.png)
+
+![tt](./../pictures/pictures/Secure-your-application-by-using-OpenID-Connect-and-Azure-AD3.png)
+
+!![tt](./../pictures/pictures/Secure-your-application-by-using-OpenID-Connect-and-Azure-AD4.png)
+
