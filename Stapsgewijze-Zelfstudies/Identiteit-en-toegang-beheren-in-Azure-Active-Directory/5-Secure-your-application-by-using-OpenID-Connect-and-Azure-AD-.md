@@ -306,3 +306,55 @@ Select Save.
 
 !![tt](./../pictures/pictures/Secure-your-application-by-using-OpenID-Connect-and-Azure-AD4.png)
 
+
+## Test the application
+Open a new browser window and go to the web application's base URL.
+
+When you're prompted, sign in. You'll be authenticated against your Azure AD tenant. The web app also requests some permissions, and you'll be prompted for your consent.
+
+
+![tt](./../pictures/Youll be-authenticated-against-your-Azure-AD-tenant.png)
+
+Select Accept. The web app then appears. The title bar includes your authenticated username, indicating that you've been successfully logged in with the identity in the Learn Module AAD Tenant directory.
+
+You've now created both the application registration and the web app itself. You've configured these objects with the information that they need to locate each other.
+
+Now that the web app is configured to authenticate against Azure AD, you can use that directory to manage all the user accounts that can access your application. The same accounts that grant users access to services like Microsoft 365 can now be used to access your app. Users have to remember only one set of credentials for both systems. Administrators have less work to do because each user has only one account.
+
+Next unit: Summary
+
+
+Summary
+5 minutes
+In this module, you have explored the OpenID Connect concepts for authentication.
+
+By using an example application, you used the OpenID Connect ASP.NET OWIN middleware to sign in users from a single Azure Active Directory (Azure AD) tenant. Users now sign in with the same accounts that they use for Microsoft 365.
+
+Clean up
+The sandbox will clean up your resources automatically when you finish this module. But the Azure AD tenant that you created must be deleted manually.
+
+To delete the Azure AD tenant, follow these steps:
+
+In the Azure portal , in the top bar, select your account, and then select Switch directory.
+Select the Learn Module AAD Tenant directory that you created in unit 4.
+In the left pane, select Azure Active Directory, select App Registrations, and then select the WebApp-OpenIDConnect-DotNet registration.
+Select Delete, and then select Yes.
+In the left pane, select Azure Active Directory. Then under Manage, select Properties.
+Under Access management for Azure resources, select Yes, and then select Save.
+In the upper right of the portal, select your user account, and then select Sign out.
+Sign in with your normal credentials. In the top bar, select your account, and then select Switch directory.
+Select the Learn Module AAD Tenant directory that you created in unit 4.
+In the left pane, select Azure Active Directory, select Delete directory, and then select Delete.
+In the upper right of the portal, select your user account, and then select Sign out.
+Further reading
+
+[Authorize access to web applications by using OpenID Connect and Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/azuread-dev/v1-protocols-openid-connect-code)
+[OpenID Connect specification](https://openid.net/specs/openid-connect-core-1_0.html)
+[ID tokens](https://docs.microsoft.com/en-us/azure/active-directory/develop/id-tokens)
+[Azure Active Directory access tokens](https://docs.microsoft.com/en-us/azure/active-directory/develop/access-tokens)
+
+
+[De soeverein is niet thuis](http://zuidugchelen.eu:82/s/9bfRNonCAYFpF5Q)
+
+[](http://zuidugchelen.eu:82/s/9bfRNonCAYFpF5Q)
+

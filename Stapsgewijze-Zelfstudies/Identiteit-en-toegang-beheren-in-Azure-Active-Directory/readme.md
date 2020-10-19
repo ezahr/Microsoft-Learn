@@ -78,3 +78,8 @@ Evaluate options to manage device identities in Azure AD. Allow users to join de
  
 Add your custom domain to Azure Active Directory. Add DNS information to the domain registrar. Verify your custom domain name in the Azure portal and set it as the primary.
 
+![tt](./../pictures/functioneel_domeinen.png)
+
+![tt](./../pictures/wet_digitale_overheid.png)
+
+![tt](./../pictures/Youll be-authenticated-against-your-Azure-AD-tenant.png)
