@@ -49,7 +49,7 @@ The retail company you work for is conscious about its reputation. Compromised i
 In this unit, you'll learn what Identity Protection is and the risks involved in using it. You'll explore the different workflows you can use in Identity Protection to protect your identities.
 
 
-![tt](./../pictures/What-is-Azure-Active-Directory-Identity-Protection.png)
+![tt](../../pictures/What-is-Azure-Active-Directory-Identity-Protection.png)
 
 ## What are risks?  kasns maal schade. 
 Risks can be described as suspicious activity and actions by users when they sign in or when they take actions after signing in. That's why risks are categorized in two ways, as user risks and sign-in risks.
@@ -82,7 +82,7 @@ Identity Protection uses risk policies to automatically respond to detected thre
 In this workflow, the administrator first configures the risk policies that then monitor for identity risks. When a risk is detected, the policies enforce measures to remediate it. A policy might, for example, ask a user to reset their password in response to a risk detected. The user then resets their password, and the risk is remediated.
 
 
-![tt](./../pictures/Administrator-remediation-workflow.png)
+![tt](../../pictures/Administrator-remediation-workflow.png)
 
 Check your knowledge
 1. How do you protect against identity-based risks by using Azure AD Identity Protection?
@@ -126,13 +126,13 @@ Make sure users are already registered for Azure Multi-Factor Authentication bef
 
 
 
-![tt](./../pictures/Make-sure-users-are-already-registered-for-Azure-Multi-Factor-Authentication-before-you-apply-this-policy.png)
+![tt](../../pictures/Make-sure-users-are-already-registered-for-Azure-Multi-Factor-Authentication-before-you-apply-this-policy.png)
 
 
 After a sign-in risk is identified, the user is asked to take action to remediate the risk. They're told what triggered the risk and what they need to provide to resolve the issue. For example, the user might see this notification.
 
 
-![tt](./../pictures/help_us_to_protect_your_account.png)
+![tt](../../pictures/help_us_to_protect_your_account.png)
 
 
 ## User risk policy
@@ -141,11 +141,11 @@ Here, Identity Protection learns the user's normal behavioral patterns. Identity
 You use a form to configure a user risk policy in the Azure portal. You specify settings such as the users this policy should target, the conditions that must be met, and how you'll respond. Make sure users are already registered for self-service password reset before you apply this policy.
 
 
-![tt](./../pictures/configure-a-user-risk-policy-in-the-Azure-portal.png)
+![tt](../../pictures/configure-a-user-risk-policy-in-the-Azure-portal.png)
 
 After a user risk is identified, the user is asked to take action to remediate that risk. They're told what triggered the risk and what they need to provide to resolve the issue. For example, the user might see this notification.
 
-![tt](./../pictures/your_account_is_at_risk.png)
+![tt](../../pictures/your_account_is_at_risk.png)
 
 ## Multifactor authentication (MFA) registration policy
 Multifactor authentication adds a second layer of protection to your users' identities. With multifactor authentication, the user has to go through an additional verification step after they successfully provide their username and password.
@@ -161,7 +161,7 @@ Users must complete the registration within 14 days, but they can choose to skip
 
 Next unit: Investigate and remediate risks detected by Azure AD Identity Protection
 
-![tt](./../pictures/more-information-required.png)
+![tt](../../pictures/more-information-required.png)
 
 Next unit: Investigate and remediate risks detected by Azure AD Identity Protection
 
@@ -188,7 +188,7 @@ You can also access risk detection type reports, which combine information about
 You can view and download all reports from the Azure portal.
 
 
-![tt](./../pictures/You-can-view-and-download-all-reports-from-the-Azure-portal.png)
+![tt](../../pictures/You-can-view-and-download-all-reports-from-the-Azure-portal.png)
 
 
 ## Remediate risks
