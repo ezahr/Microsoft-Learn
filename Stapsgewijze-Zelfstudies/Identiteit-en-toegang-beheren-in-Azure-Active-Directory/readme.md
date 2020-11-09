@@ -82,4 +82,4 @@ Add your custom domain to Azure Active Directory. Add DNS information to the dom
 
 ![tt](../../pictures/wet_digitale_overheid.png)
 
-![tt](../../pictures/Youll be-authenticated-against-your-Azure-AD-tenant.png)
+![tt](../../pictures/Youll-be-authenticated-against-your-Azure-AD-tenant.png)
